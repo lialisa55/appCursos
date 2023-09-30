@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idcategoria');
             $table->string('nome');
             $table->string('cargahoraria');
-            $table->decimal('valor');
+            $table->decimal('valor', 6.2);
             $table->timestamps();
             $table->foreign('idcategoria')->references('id')->on('categorias');
         });
