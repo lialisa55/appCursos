@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/cadastrocategoria', function () {
+    return view('cad_categoria');
+});
+
