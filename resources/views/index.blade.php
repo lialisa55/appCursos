@@ -1,4 +1,5 @@
-@yield('padrao')
+@include('padrao')
+@section('conteudo')
 </main>
     <!-- ======== main-wrapper end =========== -->
 

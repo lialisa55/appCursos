@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\http\controllers\CategoriaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/cadastrocategoria', function () {
-    return view('cad_categoria');
-});
+
+Route::get('/', [CategoriaController::class, 'index'])->name('index');
+Route::get('/cadastrocategoria', [CategoriaController::class, 'mostrarFormCat'])->name('cadcategoria');
 
